@@ -34,9 +34,19 @@ namespace StackAndQueue
             }
             while (temp != null)
             {
-                Console.Write(temp.data + " ");
+                Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
+        }
+        internal void dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("queue is empty");
+                return;
+            }
+            Console.WriteLine("{0} is dequeue", this.head.data);
+            this.head = this.head.next;
         }
     }
 }
